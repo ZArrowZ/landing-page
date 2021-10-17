@@ -1,0 +1,114 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Landing Page </h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Section 1">
+      <div class="landing__container">
+        <div class="contain">
+            <h2>Section 1</h2>
+          <ion-icon class="arrow__up" name="chevron-up-outline"></ion-icon>
+          <ion-icon class="arrow__down"name="chevron-down-outline"></ion-icon>
+        </div>
+
+        <div class="collapsible__container">
+          <div class="collapsible">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+            <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perferendis atque distinctio ullam corporis, incidunt perspiciatis harum, praesentium, accusantium est repellendus. Quam amet doloremque magnam quisquam labore, aut ad incidunt rerum? Commodi nesciunt blanditiis dolor dolore saepe. Molestiae ea ducimus placeat temporibus optio esse error, odit ad aperiam alias commodi.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section id="section2" data-nav="Section 2">
+      <div class="landing__container">
+        <div class="contain">
+          <h2>Section 2</h2>
+          <ion-icon class="arrow__up__two" name="chevron-up-outline"></ion-icon>
+          <ion-icon class="arrow__down__two"name="chevron-down-outline"></ion-icon>
+        </div>
+
+        <div class="collapsible__container">
+          <div class="collapsible__two">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+            <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus natus dicta repellendus distinctio illo. Inventore similique quam culpa quidem impedit quia modi aliquam labore atque ut at saepe, iure ex deleniti voluptas cum consequatur beatae! Id totam ipsam, quas, exercitationem error obcaecati excepturi quia nesciunt, laboriosam possimus facilis itaque esse?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section3" data-nav="Section 3">
+      <div class="landing__container">
+        <div class="contain">
+          <h2>Section 3</h2>
+          <ion-icon class="arrow__up__three" name="chevron-up-outline"></ion-icon>
+          <ion-icon class="arrow__down__three"name="chevron-down-outline"></ion-icon>
+        </div>
+
+        <div class="collapsible__container">
+          <div class="collapsible__three">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+            <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere velit impedit consequuntur minus sit magnam aspernatur eveniet. Non, unde eveniet accusamus iusto dolores sapiente eligendi, adipisci nesciunt blanditiis possimus necessitatibus architecto molestiae laborum nobis hic laudantium minus nihil. Quibusdam cumque, minima asperiores minus vitae quam voluptatum numquam optio unde! Quae?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="section4" data-nav="Section 4">
+      <div class="landing__container">
+        <div class="contain">
+          <h2>Section 4</h2>
+          <ion-icon class="arrow__up__four" name="chevron-up-outline"></ion-icon>
+          <ion-icon class="arrow__down__four"name="chevron-down-outline"></ion-icon>
+        </div>
+
+        <div class="collapsible__container">
+          <div class="collapsible__four">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+            <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptates inventore alias harum quis, quod aut enim excepturi dolores rerum dolore, quae facere. Eos, harum! Quae, ad ratione doloremque mollitia hic voluptas magnam, in eligendi dolores architecto natus maxime nostrum praesentium velit iste. Soluta fugit perspiciatis veritatis mollitia quam fugiat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- arrow go to top -->
+    <div class="btn">
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </div>
+
+
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+<script src="js/app.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
