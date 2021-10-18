@@ -1,14 +1,3 @@
-/*
- *
- * CSS written based on SMACSS architecture.
- * To learn more, visit: http://smacss.com/
- * 
- * For simplicity, no reset or normalize is added. 
- * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
- *
-*/
-
-
 /* ---- Base Rules ---- */
 html {
     scroll-behavior: smooth;
@@ -22,8 +11,7 @@ body {
     color: #fff;
 }
  
-
-/* Typeography General*/
+/* Typography General*/
 
 h1 {
     font-family: 'Fira Sans', sans-serif;
@@ -290,8 +278,8 @@ section.active .landing__container::before {
 
 .collapsible {
     position: relative;
-    top: 0px;
-    transition: 1s;
+    top: 0;
+    transition: 0.5s ease-in-out;
 }
 .collapsible__container {
     overflow: hidden;
@@ -317,7 +305,7 @@ section.active .landing__container::before {
 .collapsible__two {
     position: relative;
     top: 0px;
-    transition: 1s;
+    transition: 0.5s ease-in-out;
 }
 
 /* Make sections Three collapsible */
@@ -340,7 +328,7 @@ section.active .landing__container::before {
 .collapsible__three {
     position: relative;
     top: 0px;
-    transition: 1s;
+    transition: 0.5s ease-in-out;
 }
 
 /* Make sections four collapsible */
@@ -363,5 +351,11 @@ section.active .landing__container::before {
 .collapsible__four {
     position: relative;
     top: 0px;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 415px){
+    section h2 {
+        margin-top: 7rem;
+    }
 }

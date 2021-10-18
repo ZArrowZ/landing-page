@@ -1,7 +1,6 @@
 // build the nav bar with 4 sections
 // make scroll to the sections
 // make class active when we in viewport
-// hide fixed navbar while not scrolling
 // make a button to scroll to the top
 
 // create a sections in navbar.
@@ -22,30 +21,32 @@ for (let i = 1; i <= 4; i++) {
 
 // create a scroll to the sections
 
-let distanceOne = sectionOne.getBoundingClientRect().top;
-let distanceTwo = sectionTwo.getBoundingClientRect().top;
-let distanceThree = sectionThree.getBoundingClientRect().top;
-let distanceFour = sectionFour.getBoundingClientRect().top;
-let anchors = document.querySelectorAll(".menu__link");
+const anchors = document.querySelectorAll(".menu__link");
+const sections = document.querySelectorAll("section");
 
 anchors[0].addEventListener("click", (evt) => {
   evt.preventDefault();
-  document.body.scroll({ top: distanceOne });
+  sections[0].scrollIntoView();
 });
 anchors[1].addEventListener("click", (evt) => {
   evt.preventDefault();
-  document.body.scroll({ top: distanceTwo });
+  sections[1].scrollIntoView();
 });
 anchors[2].addEventListener("click", (evt) => {
   evt.preventDefault();
-  window.scroll({ top: distanceThree });
+  sections[2].scrollIntoView();
 });
 anchors[3].addEventListener("click", (evt) => {
   evt.preventDefault();
-  window.scroll({ top: distanceFour });
+  sections[3].scrollIntoView();
 });
 
 // add class Active to the sections
+
+const distanceOne = sectionOne.getBoundingClientRect().top;
+const distanceTwo = sectionTwo.getBoundingClientRect().top;
+const distanceThree = sectionThree.getBoundingClientRect().top;
+const distanceFour = sectionFour.getBoundingClientRect().top;
 
 let distance = window.scrollY;
 window.addEventListener("scroll", () => {
@@ -101,7 +102,7 @@ const arrowDown = document.querySelector(".arrow__down");
 const containerParagraph = document.querySelector(".collapsible");
 
 arrowUp.addEventListener("click", () => {
-  containerParagraph.style.top = "-2000px";
+  containerParagraph.style.top = "-2600px";
   arrowUp.style.display = "none";
   arrowDown.style.display = "block";
 });
@@ -118,7 +119,7 @@ const arrowDownTwo = document.querySelector(".arrow__down__two");
 const containerParagraphTwo = document.querySelector(".collapsible__two");
 
 arrowUpTwo.addEventListener("click", () => {
-  containerParagraphTwo.style.top = "-2000px";
+  containerParagraphTwo.style.top = "-2600px";
   arrowUpTwo.style.display = "none";
   arrowDownTwo.style.display = "block";
 });
@@ -135,7 +136,7 @@ const arrowDownThree = document.querySelector(".arrow__down__three");
 const containerParagraphThree = document.querySelector(".collapsible__three");
 
 arrowUpThree.addEventListener("click", () => {
-  containerParagraphThree.style.top = "-2000px";
+  containerParagraphThree.style.top = "-2600px";
   arrowUpThree.style.display = "none";
   arrowDownThree.style.display = "block";
 });
@@ -152,7 +153,7 @@ const arrowDownFour = document.querySelector(".arrow__down__four");
 const containerParagraphFour = document.querySelector(".collapsible__four");
 
 arrowUpFour.addEventListener("click", () => {
-  containerParagraphFour.style.top = "-2000px";
+  containerParagraphFour.style.top = "-2600px";
   arrowUpFour.style.display = "none";
   arrowDownFour.style.display = "block";
 });
