@@ -2,6 +2,7 @@
 // make scroll to the sections
 // make class active when we in viewport
 // make a button to scroll to the top
+// window.scrollY took it form here https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY
 
 // create a sections in navbar.
 
