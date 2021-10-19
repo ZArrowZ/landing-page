@@ -13,12 +13,14 @@ const sectionThree = document.getElementById("section3");
 const sectionFour = document.getElementById("section4");
 const ul = document.getElementById("navbar__list");
 
+const fragment = document.createDocumentFragment();
 for (let i = 1; i <= 4; i++) {
-  var li = document.createElement("li");
-  ul.appendChild(li);
+  let li = document.createElement("li");
   li.innerHTML = `<a href="#">Section ${i}</a>`;
   li.firstElementChild.setAttribute("class", "menu__link");
+  fragment.appendChild(li);
 }
+ul.appendChild(fragment);
 
 // create a scroll to the sections
 
